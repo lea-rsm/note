@@ -5,3 +5,10 @@ function checkTextFormat(){
   };
 
   checkTextFormat();
+
+  function returnNote(){
+    var note = new Note("Xin's note");
+    assert.isTrue(note.returnNote() === "Xin's note", "return the note when method returnNote is called");
+  };
+
+  returnNote();
