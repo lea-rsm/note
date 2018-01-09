@@ -5,21 +5,20 @@ function createAList(){
 
 createAList();
 
-function addNoteToList() {
+function AddNoteToList() {
   var list = new List()
-  var note = new Note("Lea's note")
-  list.addNoteToList(note);
+  list.AddNoteToList("Lea's note");
   assert.isTrue(list.notes.length === 1, "A note was added to the list")
 
 };
 
- addNoteToList();
+ AddNoteToList();
 
-function getNotesFromList() {
+function getNotes() {
   var list = new List()
-  var note = new Note("Lea's note")
-  list.addNoteToList(note);
-  assert.isTrue(list.getNotesFromList()[0].returnNote() === "Lea's note", "Return the list of notes")
-}
+  list.AddNoteToList("Lea's note");
+  list.AddNoteToList("Tom's note");
+  assert.isTrue(list.getNotes() === "Lea's note, Tom's note, " , "Return all the notes from the list")
+};
 
-getNotesFromList();
+getNotes();

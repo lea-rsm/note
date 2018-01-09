@@ -2,14 +2,17 @@
   function List() {
     this.notes = [];
   };
-  // var note = new Note("note")
-    List.prototype.addNoteToList = function (note) {
+
+    List.prototype.AddNoteToList = function (note) {
     this.notes.push(note);
   };
 
-    List.prototype.getNotesFromList = function () {
-      return this.notes
-    };
+  List.prototype.getNotes = function () {
+    var listofnotes = ""
+    for ( var i = 0; i< this.notes.length; i++ ){
+      listofnotes += this.notes[i] + ", "
+    } return listofnotes
+  };
 
   exports.List = List;
 })(this);
