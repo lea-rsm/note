@@ -3,15 +3,13 @@
     this.notes = [];
   };
 
-    List.prototype.AddNoteToList = function (note) {
+  List.prototype.AddNoteToList = function (noteToAdd) {
+    note = new Note(noteToAdd)
     this.notes.push(note);
   };
 
   List.prototype.getNotes = function () {
-    var listofnotes = ""
-    for ( var i = 0; i< this.notes.length; i++ ){
-      listofnotes += this.notes[i] + ", "
-    } return listofnotes
+    return this.notes.map(note => note.returnNote())
   };
 
   exports.List = List;
