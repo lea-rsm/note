@@ -5,8 +5,12 @@
   }
 
   NoteViewer.prototype.viewNotes = function() {
-    for(var i = 0; i<this.list.length)
+    var location = document.getElementById('list');
+    var arr = this.list.getNotes();
+    var len = this.list.getNotes().length;
+    for(var i = 0; i < len; i++) {
+      location.append(arr[i]);
+    };
   };
-
-  exports.NoteViewer = NoteViewer
+  exports.NoteViewer = NoteViewer;
 })(this);
