@@ -10,6 +10,7 @@
     var arr = this.list.getNotes();
     var len = this.list.getNotes().length;
 
+    location.innerHTML = " "
     for (var i = 0; i < len; i++) {
       var node = document.createElement("LI");
       var textnode = document.createTextNode(arr[i]);
